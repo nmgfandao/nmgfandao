@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>泛彼四海，通达大道</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/indexmain.css">
+<link rel="stylesheet" href="css/ufont.css">
+<link rel="shortcut icon" href="res/ico/cer.ico" type="image/x-icon" />
+<script src="js/jquery221.js"></script>
+<script src="js/bootstrap337.js"></script>
+</head>
+<body>
+	<div class="nav navbar-fixed-top uhead">
+		<div class="bg-wide uhead">
+			<div class="container">
+				<div class="col-xs-4 mainlogoholder">
+					<a href="prop/main.html" target="ifra"><img src="res/img/logo-wide.png" class="logo"></a>
+				</div>
+				<div class="col-xs-8 umenumobile">
+					<table style="width:100%;">
+						<tr>
+							<td class="headleft">
+								<ul class="menu">
+									<li class="menuitem"><a href="prop/main.html" target="ifra">首页</a></li>
+									<li class="menuitem"><a href="prop/aboutus.html" target="ifra">公司简介</a></li>
+									<li class="menuitem"><a href="prop/services.html" target="ifra">服务项目</a></li>
+									<li class="menuitem"><a href="prop/hr.html" target="ifra">招贤纳士</a></li>
+									<li class="menuitem"><a href="prop/contactus.html" target="ifra">联系我们</a></li>
+								</ul>
+							</td>
+							<td class="headright">
+								<button id="mobile-menu"><img src="res/img/menu.png" alt="MENU"></button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<iframe id="mainframe" src="prop/main.html" name="ifra"></iframe>
+
+</body>
+<script src="js/index.js"></script> 
+<script type="text/javascript">
+	var flag=1;
+	$("#mobile-menu").click(function(){
+		if(flag==1){
+			$(".menu").fadeIn(300);
+			flag=0;
+		}
+		else{
+			$(".menu").fadeOut(300);
+			flag=1;
+		}
+	}); 
+	$(".menuitem").click(function(){
+		if($(window).width()<=450){
+			$("#mobile-menu").click();
+		}
+	});
+</script>
+</html>

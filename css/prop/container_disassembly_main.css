@@ -1,0 +1,12 @@
+div{
+	/*border:1px solid #123123;*/
+}
+
+
+@media ( max-width : 450px) {
+	html{
+		margin-left:0px;
+		margin-right:0px;
+	}
+
+}

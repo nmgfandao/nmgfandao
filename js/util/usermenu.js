@@ -1,0 +1,19 @@
+$(document).ready(function(){
+	var appmenu = new Vue({
+		el:'#menu',
+		data:{
+			menulist:[
+		          {title:'HOME',url:'cerberus.html',p:''},
+		          {title:'规划师v',url:'users.html',p:''},
+		          {title:'学生v',url:'clients.html',p:''},
+		          {title:'前期咨询师',url:'presales.html',p:''}
+          	]
+		},
+		methods:{
+			navto:function(e){
+				//alert(this.menulist[e].title);
+				location.href=this.menulist[e].url;
+			}
+		}
+	});
+})
